@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src='js/tinymce/tinymce.min.js'></script>
+  <script type="text/javascript">
+  	function GetContent() {
+  	  return tinyMCE.get('editorcontent').getContent();
+  	}
+	
+  	function SetContent(htmlContent) {
+  	  tinyMCE.get('editorcontent').setContent(htmlContent);
+  	}
+  </script>
+  <script>
+  	tinyMCE.init({
+  	  selector: '#editorcontent',
+  	  plugins: [
+  	    'autolink link lists charmap hr anchor',
+  	    'searchreplace wordcount visualblocks visualchars code fullscreen insertdatetime nonbreaking',
+  	    'table contextmenu directionality template paste textcolor'
+  	  ],
+  	  menubar: "edit insert view format table tools",
+  	  language: 'cs_CZ',
+  	  setup : function(ed) {
+  			ed.on('init',function(e) {
+  			    ed.execCommand('mceFullScreen');
+  			});
+		}
+    /*oninit : function() {  // Once initialized, tell the editor to go fullscreen
+        tinyMCE.get('editorcontent').execCommand('mceFullScreen');
+    }*/
+  	});
+  </script>
+</head>
+
+<body>
+	<form method="post">
+	    <textarea id="editorcontent">Hello, World!</textarea>
+	</form>
+</body>
+</html>
