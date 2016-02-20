@@ -28,8 +28,6 @@ namespace WinFormHtmlEditor
             {
                 tinyMceEditor.HtmlContent = File.ReadAllText(openFileDialog.FileName);
             }
-            /*var htmlContent = tinyMceEditor.HtmlContent;
-            Console.WriteLine(htmlContent);*/
         }
 
         private void saveButton_Click(object sender, EventArgs e)
