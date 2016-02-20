@@ -22,13 +22,10 @@
   	  menubar: "edit insert view format table tools",
   	  //language: 'cs_CZ',
   	  setup : function(ed) {
-  			ed.on('init',function(e) {
-  			    ed.execCommand('mceFullScreen');
-  			});
-		}
-    /*oninit : function() {  // Once initialized, tell the editor to go fullscreen
-        tinyMCE.get('editorcontent').execCommand('mceFullScreen');
-    }*/
+  		ed.on('init',function(e) {
+  			ed.execCommand('mceFullScreen');
+  		});
+  	  }
   	});
   </script>
 </head>
