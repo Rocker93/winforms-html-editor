@@ -21,6 +21,9 @@ namespace WinFormHtmlEditor
             get { return webBrowserControl.ActiveXInstance; }
         }
 
+        /// <summary>
+        /// HTML Content of TinyMCE editor
+        /// </summary>
         public string HtmlContent
         {
             get
@@ -38,15 +41,21 @@ namespace WinFormHtmlEditor
                 webBrowserControl.Document?.InvokeScript("SetContent", new object[] { value });
             }
         }
-
-        public void setFullscreen()
+        
+        /// <summary>
+        /// Set tinyMCE to fullscreen mode
+        /// </summary>
+        public void SetFullscreen()
         {
             webBrowserControl.Document?.InvokeScript("tinyMCE.execCommand('mceFullScreen')");
         }
 
+        /// <summary>
+        /// Create editor instance
+        /// </summary>
         public void CreateEditor()
         {
-            // Check if the main script file exist being used by the HTML page
+            // Check if the main script used by the HTML page exists
             if (File.Exists(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"tinymce\js\tinymce\tinymce.min.js")))
             {
                 webBrowserControl.Url = new Uri(@"file:///" + Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"tinymce/tinymce.htm").Replace('\\', '/'));
