@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
@@ -21,10 +22,23 @@ namespace WinFormHtmlEditor
             tinyMceEditor.CreateEditor();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void loadButton_Click(object sender, EventArgs e)
         {
-            var htmlContent = tinyMceEditor.HtmlContent;
-            Console.WriteLine(htmlContent);
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                tinyMceEditor.HtmlContent = File.ReadAllText(openFileDialog.FileName);
+            }
+            /*var htmlContent = tinyMceEditor.HtmlContent;
+            Console.WriteLine(htmlContent);*/
         }
+
+        private void saveButton_Click(object sender, EventArgs e)
+        {
+            if (saveFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                File.WriteAllText(saveFileDialog.FileName, tinyMceEditor.HtmlContent);
+            }
+        }
+        
     }
 }
