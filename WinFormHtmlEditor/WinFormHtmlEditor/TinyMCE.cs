@@ -55,6 +55,8 @@ namespace WinFormHtmlEditor
         /// </summary>
         public void CreateEditor()
         {
+            webBrowserControl.ScriptErrorsSuppressed = true;
+
             // Check if the main script used by the HTML page exists
             if (File.Exists(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"tinymce\js\tinymce\tinymce.min.js")))
             {
