@@ -13,4 +13,4 @@ Tested and working on Windows 10.
    [TinyMCE]: <https://www.tinymce.com/>
    [BrutalDeveloper]: <https://brutaldev.com/post/tinymce-running-in-windows-forms>
    [TinyMCE Settings]: <winforms-html-editor/WinFormHtmlEditor/WinFormHtmlEditor/tinymce/tinymce.htm>
-   [screen]: <winforms-html-editor/sample_screen.png> "Editor screenshot"
+   [screen]: <sample_screen.png> "Editor screenshot"
