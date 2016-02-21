@@ -8,6 +8,9 @@ It is also possible to enable/ disable additional TinyMCE features in [TinyMCE S
 
 Tested and working on Windows 10.
 
+![editor sample][screen]
+
    [TinyMCE]: <https://www.tinymce.com/>
    [BrutalDeveloper]: <https://brutaldev.com/post/tinymce-running-in-windows-forms>
    [TinyMCE Settings]: <winforms-html-editor/WinFormHtmlEditor/WinFormHtmlEditor/tinymce/tinymce.htm>
+   [screen]: <winforms-html-editor/sample_screen.png> "Editor screenshot"
